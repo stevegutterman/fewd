@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+
+    <meta charset="utf-8">
+    <title>CSS Layout</title>
+  </head>
+  <body>
+
+    <h1>CSS Layout</h1>
+    <h2>Technique #1: Table</h2>
+    <table>
+      <tr>
+        <td>uno
+        </td>
+        <td>dos
+        </td>
+        <td>tres
+        </td>
+      </tr>
+    </table>
+
+    <main>
+        <section>Column 1</section>
+        <section>Column 2</section>
+        <section>Column 3</section>
+    </main>
+    <h2> breaking this up </h>
+      
+    <main>
+        <section class="third">Column 1</section>
+        <section>Column 2</section>
+        <section>Column 3</section>
+    </main>
+
+    <h2>Flexbox - sidebar</h2>
+    <header>
+      <article>
+        Lorem Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+      </article>
+    <div class="sidebar">
+      Sidebar
+    </div>
+    </header>
+
+
+
+    <h2>Technique #2: Float</h2>
+    <ul>
+      <li>red</li>
+      <li>green</li>
+      <li>white</li>
+    </ul>
+    <p>Copyright 2018</p>
+
+<style>
+
+main {
+  display: flex;
+}
+
+h2 {
+  margin: 20px;
+
+}
+ body{
+   margin:10px;
+ }
+ ]
+
+/* Float, parent styles: */
+ul {
+  overflow: hidden;
+}
+/* Float, child styles: */
+li {
+  float: left;
+  background: lightblue;
+  border: 1px solid blue;
+  padding: 20px;
+}
+
+section {
+  padding: 10px;
+  background: #AACCCC;
+}
+
+header {
+  display: flex;
+}
+.sidebar   {
+  width: 200px;
+  background: grey;
+  border: 3px solid black;
+
+}
+
+</style>
+
+</body>
+</html>
