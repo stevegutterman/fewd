@@ -1,0 +1,47 @@
+button {
+  background-color: #303db4;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 18px;
+  border: none;
+  width: 100px;
+  height: 40px;
+}
+
+.product {
+  margin-bottom: 1em;
+  overflow: auto;
+}
+.product_img {
+  float: left;
+  padding-right: 2em;
+  width: 300px;
+}
+.deet_butt {
+  color: blue;
+  background-color: white;
+  border: 2px solid blue;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.deet_butt:hover {
+  color: white;
+  background-color: blue;
+}
+.cart_butt {
+  color: white;
+  background-color: blue;
+  border: 2px solid blue;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.cart_butt:hover {
+  color: blue;
+  background-color: white;
+}
