@@ -1,35 +1,24 @@
-button {
-  background-color: #303db4;
-  border-radius: 5px;
-  color: white;
-  text-align: center;
-  display: inline-block;
-  font-size: 18px;
-  border: none;
+label {
   width: 100px;
-  height: 40px;
+  cursor: pointer;
+  display: inline-block;
 }
-  label {
-    width: 100px;
-    cursor: pointer;
-    display: inline-block;
-  }
-  .form-row {
-    margin-bottom: 1em;
-  }
-  .text_input {
-    width: 200px;
-    border: 2px solid black;
-    border-radius: 2px;
-  }
-  .text_input:invalid {
-    border: 2px solid red;
-  }
-  .text_input:valid {
-    border: 2px solid green;
-  }
-  .text_input:focus {
-    box-shadow: none;
-    border: 2px solid black;
-    outline: none;
-  }
+.form-row {
+  margin-bottom: 1em;
+}
+.text_input {
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+.text_input:invalid {
+  border: 2px solid red;
+}
+.text_input:valid {
+  border: 2px solid green;
+}
+.text_input:focus {
+  box-shadow: none;
+  border: 2px solid black;
+  outline: none;
+}

@@ -1,84 +1,57 @@
+body {
+  background-image: url(../images/background.png);
+  font-family: "Lucida Grande";
+  margin: 0px;
+}
 header {
-  background-color: #c4c4c4;
-  font-family: Lucida Grande;
-  color: white;
-  margin: -8px;
-  padding: 21px;
-  border-bottom:solid #999999 1px;
-  border-top:solid #999999 1px;
-  box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.3);
+  background-color: rgb(196,196,196);
+  padding: 20px;
+  border-bottom: 1px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
-
-button {
-  background-color: #303db4;
-  border-radius: 5px;
+header a {
   color: white;
-  text-align: center;
-  display: inline-block;
-  font-size: 18px;
-  border: none;
-  width: 100px;
-  height: 40px;
+  text-decoration: none;
 }
-
+nav {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+.logo {
+  width: 190px;
+}
+li {
+  display: inline;
+  padding: 10px;
+}
 main {
-  background-color: white;
-  border-radius: 5px;
-  font-family: Lucida Grande;
-  display: block;
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
-  box-shadow: 0px 2px 20px -2px rgba(0,0,0,0.5);
-  width: 60%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 800px;
 }
-
-ul {
-  text-align: right;
-  list-style-type: none;
-  margin: 0px;
-  padding: 0;
-}
-
-li {
-  display: inline;
-  margin: 10px;
-}
-
-a {
-  text-decoration: none;
+.button {
+  background-color: rgb(51,60,181);
   color: white;
-  text-shadow: 1px 2px #999999;
+  font-size: 16px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
 }
-
-body {
-  background: url("../Images/background.png");
-}
-
-hr {
-  width: 65%;
-  height: 0;
-  box-shadow: 0px 1px 0px 0px rgba(255,255,255,1);
-}
-
-
 footer {
-  color: #999999;
-  font-family: Lucida Grande;
-  margin-left: 45%;
-  margin-top: 30px;
-}
-
-@media (max-width: 450px)
-{
-  img {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-  /*ul {
-    display: block;
-    padding-top: 5px;
-  }*/
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  border-top: 1px solid rgb(193,193,193);
+  margin-top: 40px;
+  text-align: center;
+  color: rgb(154,154,154);
+  font-size: .7em;
+  width: 850px;
 }
