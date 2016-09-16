@@ -1,52 +1,67 @@
-<head>
-  <link rel="stylesheet" href="css/twitterhome.css" media="screen" title="no title" charset="utf-8">
-  <title>TWITTER - Home</title>
-</head>
-<body>
-   <header>
-   <p>Twitter</p>
-   <nav>
-   <ul>
-     <li><a href="#"><button>Sign Up</button></a></li>
-     <li><a href="#"><button>Login</button></a></li>
-   </ul>
- </nav>
-  </header>
 
-   <main>
-     <div class="tweetrow">
-       <img src="images/face1.jpg" alt="acme_cheese" class="product_img"/>
-       <form="form-row">
-         <input type="text" id="tweet" placeholder="What's Happening?">
-         <button type="button" class="tweetbutton">Tweet</button>
-       </form>
-     <hr>
-     </p></div>
-     <div class="tweets">
-       <img src="images/face2.jpg" alt="acme_strait" class="product_img"/>
-       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-       <link type="button" id="like">
-     <hr>
-     </div>
-     <div class="tweets"><img src="images/face3.jpg" alt="stove_lid" class="product_img"/>
-       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-       <label for="like">Like</label>
-       <link type="button" id="like"
-     <hr>
-     </div>
-     <div class="tweets"><img src="images/face4.jpg" alt="stove_lid" class="product_img"/>
-       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-       <label for="like">Like</label>
-       <link type="button" id="like"
-     </div>
-   </main>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Twitter</title>
+    <link rel="stylesheet" href="css/twitterhome.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
 
-<br><br>
+    <header>
+      <h1>Twitter</h1>
+      <nav>
+          <li><button>Sign Up</button></li>
+          <li><button>Log In</button></li>
+      </nav>
+    </header>
 
- <hr></hr>
+    <main>
+      <div class="row">
+        <img src="images/face1.jpg" alt="avatar" />
+        <section>
+          <div class="new-comment">
+          <textarea name="comment" placeholder="What's Happening?" rows="8" cols="40" character-limit="140"></textarea>
+          <span class="character-limit">140</span>
+          </div>
+          <span class=tweet-button><button type="button" name="tweet">Tweet</button></span>
+          </section>
+      </div>
 
-   <footer>
-     <p>About US Careers Press Terms of Service Private Policy Contact Us  </p>
-   </footer>
+      <div class="row">
+        <img src="images/face2.jpg" alt="avatar" />
+        <section>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <a href="#"> Like </a> <span class="count"> (0) </span>
+        </section>
+      </div>
 
- </body>
+      <div class="row">
+        <img src="images/face3.jpg" alt="avatar" />
+        <section>
+          <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          <a href="#"> Like </a> <span class="count"> (0) </span>
+        </section>
+      </div>
+
+      <div id="last-row" class="row">
+        <img src="images/face4.jpg" alt="avatar" />
+        <section>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          <a href="#"> Like </a> <span class="count"> (0) </span>
+        </section>
+      <div>
+    </main>
+
+    <footer>
+      <nav>
+          <li> About Us </li>
+          <li> Careers </li>
+          <li> Press </li>
+          <li> Terms of Service </li>
+          <li> Privacy Policy </li>
+          <li> Contact Us </li>
+      </nav>
+    </footer>
+  </body>
+</html>
