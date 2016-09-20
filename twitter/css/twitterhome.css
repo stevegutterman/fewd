@@ -9,27 +9,27 @@ body {
 }
 
 button {
-  height: 45px;
-  width: 110px;
+  height: 42px;
+  width: 111px;
   border-radius: 5px;
   border: 1px solid darkgreen;
   border-bottom: 2px solid darkgreen;
   background-color: rgb(35,148,77);
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 
 /*header*/
 header {
-  background:linear-gradient(rgb(58,192,117), rgb(43,165,94));
+  background:linear-gradient(rgb(20,192,117), rgb(43,165,94));
   padding: 20px;
   color: white;
 }
 
 h1 {
   display: inline;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 header nav {
@@ -40,13 +40,10 @@ header nav {
 li {
   display: inline;
 }
-/* end of header */
 
-
-/* main*/
 main {
   background: white;
-  margin: 50px;
+  margin: 30px;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -76,7 +73,7 @@ textarea {
   border-color: rgba(14, 14, 14, 0.28);
   width: 100%;
   padding: 15px;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .character-limit {
@@ -125,10 +122,9 @@ a {
   color: gray;
 }
 
-/* end of main*/
 footer {
   color: rgba(14, 14, 14, 0.28);
-  font-size: 14px;
+  font-size: 18px;
   padding-bottom: 50px;
   font-weight: bold;
 }
