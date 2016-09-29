@@ -5,7 +5,7 @@
   <head>
     <title>Twitter</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="" href="twitterpractice.css">
   </head>
   <body>
     <header>
@@ -33,7 +33,7 @@
             <div class="char-count">140</div>
             <textarea placeholder="What’s happening?"></textarea>
           </div>
-          <input type="submit" value="Tweet" class="button">
+          <input type="submit" value="Tweet" class="button" id="tweetSubmit">
         </div>
       </form>
 
@@ -108,17 +108,28 @@
   </body>
 </html>
 <script type="text/javascript">
-
-</script>
 var li = document.createElement("li");
-li1.setAttribute("class", "tweet");
+li.setAttribute("class", "tweet");
 var div1 = document.createElement("div");
 div1.setAttribute("class", "tweet-avatar");
-var img = document.create.Element("img");
+var img = document.createElement("img");
 img.setAttribute("src", "https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg");
 var div2 = document.createElement("div");
 div2.setAttribute("class", "tweet-actions");
 var a = document.createElement("a");
 a.setAttribute("class", "tweet-actions");
 var span = document.createElement("span");
-a.setAttribute("class", "like-count")
+a.setAttribute("class", "like-count");
+
+var textarea = document.querySelector("textarea");
+var tweetbutton = document.querySelector("#tweetSubmit");
+console.log(textarea);
+console.log(tweetbutton);
+tweetbutton.addEventListener("click", addTweet);
+function addTweet(event) {
+  event.preventDefault();
+   var comment =textarea.value;
+   console.log(comment);
+}
+
+</script>

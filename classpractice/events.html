@@ -1,0 +1,24 @@
+<div id="container">
+  <div class="comment">
+    This is a comment
+  </div>
+<button>asdfsdfaf
+
+ </button>
+</div>
+
+<script type="text/javascript">
+var button =document.querySelector("button";)
+function makeASurpriseComment (event) {
+  event.preventDefault();
+  createComment("Surprise!!!!");
+}
+button.addEventListener("click", makeASurpriseComment);
+
+function createComment (commentContent) {
+  var commentDiv = document.createElement("div");
+  commentDiv.textContent = commentContent;
+  commentDiv.classList.add("comment");
+  document.querySelector("#container").appendChild(commentDiv);
+}
+</script>
