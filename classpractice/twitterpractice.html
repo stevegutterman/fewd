@@ -121,15 +121,19 @@ a.setAttribute("class", "tweet-actions");
 var span = document.createElement("span");
 a.setAttribute("class", "like-count");
 
+// adding variable for the value of text area
 var textarea = document.querySelector("textarea");
+// adding variable for the id tweetSubmit
 var tweetbutton = document.querySelector("#tweetSubmit");
 console.log(textarea);
 console.log(tweetbutton);
+// adding event listener to the click event and adding tweet
 tweetbutton.addEventListener("click", addTweet);
 function addTweet(event) {
   event.preventDefault();
    var comment =textarea.value;
    console.log(comment);
+
 }
 
 </script>

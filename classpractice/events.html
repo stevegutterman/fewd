@@ -11,7 +11,7 @@
 var button =document.querySelector("button";)
 function makeASurpriseComment (event) {
   event.preventDefault();
-  createComment("Surprise!!!!");
+  createComment(document.querySelector("textarea").value);
 }
 button.addEventListener("click", makeASurpriseComment);
 

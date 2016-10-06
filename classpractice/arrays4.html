@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Practice with Arrays</h1>
+
+<p>
+  Instructions:
+</p>
+
+<ul>
+  Take the textContent of the div with the ID students, split it on a comma.
+  Then sort the resulting array. Then loop through the each student name and
+  add their name to the ordered list below. Finally put the total number of
+  students where the total appears. Do all of this when the button is
+  clicked.
+</ul>
+
+<hr>
+
+<p>
+  <strong>Student names:</strong>
+  <span id="students">Yaphet,Kelsey,Kat,Alex,Kirstin,David,Gian,Marcelo,Pablo,Michael,Mason,Lucas,Steve,Amanda,Tim,Aislinn</span>
+</p>
+
+<p>
+  Total students: <span id="count" style="font-weight: bold">0</span>
+</p>
+
+<ol>
+</ol>
+
+<button>
+  Role call!
+</button>
+
+<script>
+var names = document.querySelector("#students").textContent;
+var ol = document.querySelector("ol");
+var b = names.split(",");
+var button = document.querySelector("button");
+b.sort();
+
+function createListItem(name) {
+  var li = document.createElement("li");
+  li.textContent = name;
+  ol.appendChild(li);
+}
+
+function displayNames(event){
+  for (var i = 0; i < b.length; i++) {
+    createListItem(b[i]);
+  }
+}
+
+
+button.addEventListener("click", displayNames);
+
+
+console.log(b);
+createListItem(b[i]);
+
+// var b = students.split(",");
+// names.textContent =
+// var rollcall
+// names.value =
+//
+// button.addEventListent()
+// </script>
+  </body>
+</html>
