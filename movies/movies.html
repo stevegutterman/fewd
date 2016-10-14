@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Movie Favorites</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style media="screen">
+      main {
+        display: flex;
+      }
+    section  {
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Favorite Movies</h1>
+    <h2>Click on a movie to see the details</h2>
+    <main>
+      <img src="jim-carrey.jpg" alt="" id"tt0109040" />
+      <img src="majorleague.jpg" alt="" id"tt0097815" />
+      <img src="majorleague3.jpg" alt="" id"tt0120742" />
+      <img src="majorleague2.jpg" alt="" id"tt0110442" />
+      <img src="rookie.jpg" alt="" id"tt0107985" />
+    <section>
+
+      <div class="">
+        Title: <span class="title"></span>
+      </div>
+      <div class="">
+        Year: <span class="year"></span>
+      </div>
+      <div class="">
+        Rating: <span class="rated"></span>
+      </div>
+      <div class="">
+        Runtime: <span class="runtime"></span>
+      </div>
+      <div class="">
+        Plot: <span class="plot"></span>
+      </div>
+    </section>
+
+  </main>
+
+  <script type="text/javascript">
+var a = document.querySelectorAll("img");
+for (var i = 0; i < a.length; i++) {
+  a[i].addEventListener("click", search);
+}
+function search(event){
+  $.get("http://omdbapi.com/?i=tt0103639", displayResults);
+
+function displayResults(results) {
+  document.querySelector(".title").textContent = results.Title;
+  document.querySelector(".year").textContent = results.Year;
+  document.querySelector(".rated").textContent = results.Rated;
+  document.querySelector(".runtime").textContent = results.Runtime;
+  document.querySelector(".plot").textContent = results.Plot;
+}
+
+}
+
+
+  </script>
+  </body>
+</html>
