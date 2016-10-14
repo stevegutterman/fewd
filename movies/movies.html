@@ -5,8 +5,16 @@
   <title>Movie Favorites</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <style media="screen">
+      body {
+        background-color:(58,58,58);
+      }
       main {
         display: flex;
+      }
+      img {
+        width:140px;
+        height:200px;
+        margin:20px;
       }
     section  {
       }
@@ -16,11 +24,11 @@
     <h1>My Favorite Movies</h1>
     <h2>Click on a movie to see the details</h2>
     <main>
-      <img src="jim-carrey.jpg" alt="" id"tt0109040" />
-      <img src="majorleague.jpg" alt="" id"tt0097815" />
-      <img src="majorleague3.jpg" alt="" id"tt0120742" />
-      <img src="majorleague2.jpg" alt="" id"tt0110442" />
-      <img src="rookie.jpg" alt="" id"tt0107985" />
+      <img src="jim-carrey.jpg" id="tt0109040" />
+      <img src="majorleague.jpg" alt="" id="tt0097815" />
+      <img src="majorleague3.jpg" alt="" id="tt0120742" />
+      <img src="majorleague2.jpg" alt="" id="tt0110442" />
+      <img src="rookie.jpg" alt="" id="tt0107985" />
     <section>
 
       <div class="">
@@ -48,7 +56,13 @@ for (var i = 0; i < a.length; i++) {
   a[i].addEventListener("click", search);
 }
 function search(event){
-  $.get("http://omdbapi.com/?i=tt0103639", displayResults);
+  var clickMovie = event.target;
+  var retrieve = clickMovie.getAttribute("id");
+    $.get("http://omdbapi.com/?i="+retrieve, displayResults);
+
+
+
+
 
 function displayResults(results) {
   document.querySelector(".title").textContent = results.Title;
