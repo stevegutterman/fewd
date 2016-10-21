@@ -14,7 +14,7 @@
 
       }
       .secondRow {
-        
+
       }
       main {
         display: flex;
@@ -77,11 +77,11 @@ function search(event){
 
 
 function displayResults(results) {
-  document.querySelector(".title").textContent = results.Title;
-  document.querySelector(".year").textContent = results.Year;
-  document.querySelector(".rated").textContent = results.Rated;
-  document.querySelector(".runtime").textContent = results.Runtime;
-  document.querySelector(".plot").textContent = results.Plot;
+  document.querySelector(".title").textContent = results.newsnow_in;
+  document.querySelector(".year").textContent = results.lowersnow_in;
+  document.querySelector(".rated").textContent = results.uppersnow_in;
+  document.querySelector(".runtime").textContent = results.pctopen;
+  document.querySelector(".plot").textContent = results.lastsnow;
 }
 
 }
