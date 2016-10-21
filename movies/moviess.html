@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie Favorites</title>
+    <style media="screen">
+      body {
+        font-family: "arial";
+        background-color: rgb(58, 58, 58);
+        color: white;
+      }
+
+      img {
+        height: 200px;
+        width: 140px;
+        margin: 5px;
+        border: 2px solid rgb(58, 58, 58);
+      }
+
+      img:hover {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      img:active {
+        border: 2px solid rgb(100, 100, 100);
+      }
+      .posters {
+        margin-right: 20px;
+      }
+      .info {
+        flex: 1;
+      }
+
+      main {
+        display: flex;
+      }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>My favorite Movies</h1>
+    <h2>Click on a movie to see the details</h2>
+    <main>
+    <section class="posters">
+      <img src="jim-carrey.jpg" alt="" id="tt0109040" />
+      <img src="majorleague.jpg" alt="" id="tt0097815" />
+      <img src="majorleague3.jpg" alt="" id="tt0120742" />
+      <br />
+      <img src="majorleague2.jpg" alt="" id="tt0110442" />
+      <img src="rookie.jpg" alt="" id="tt0107985" />
+    </section>
+
+    <section class="info">
+      <div class="">
+        Title:
+        <span id="title"></span>
+      </div>
+      <div class="">
+        Year:
+        <span id="year"></span>
+      </div>
+      <div class="">
+        Rating:
+        <span id="rating"></span>
+      </div>
+      <div class="">
+        Runtime:
+        <span id="runtime"></span>
+      </div>
+      <div class="">
+        Plot:
+        <span id="plot"></span>
+      </div>
+    </section>
+  <script type="text/javascript">
+
+  var links = document.querySelectorAll("img");
+
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", getMovie);
+  }
+
+  function getMovie(event){
+    var clickedMovie = event.target;
+    console.log(clickedMovie.getAttribute("id"));
+    var imdbID = clickedMovie.getAttribute("id");
+    var newQuery = "https://omdbapi.com/?i=" + imdbID;
+
+    $.get(newQuery, displayResults);
+
+    function displayResults(results) {
+      document.querySelector("#title").textContent = results.Title;
+      document.querySelector("#year").textContent = results.Year;
+      document.querySelector("#rating").textContent = results.Rated;
+      document.querySelector("#runtime").textContent = results.Runtime;
+      document.querySelector("#plot").textContent = results.Plot;
+    }
+
+  }
+
+  </script>
+  </body>
+</html>

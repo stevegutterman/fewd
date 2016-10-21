@@ -1,0 +1,86 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Movie Favorites</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style media="screen">
+      body {
+        background-color: #333133;
+        color: white;
+        font-family: arial;
+      }
+      .firstRow {
+
+      }
+      .secondRow {
+
+      }
+      main {
+        display: flex;
+      }
+      img {
+        width:140px;
+        height:200px;
+        margin:20px;
+      }
+    section  {
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Steve's Mountain Selector</h1>
+    <h2>Click on a resort to see where to ski today!</h2>
+    <main>
+      <div class="firstRow">
+        <img src="squaw.png" id="333003" />
+        <img src="kirkwood.png" alt="" id="333003" />
+        <img src="alpine.jpg" alt="" id="333003" />
+      </div>
+      <div class="secondRow">
+        <img src="northstar.jpg" alt="" id="333003" />
+        <img src="sugarbowl.png" alt="" id="333003" />
+      </div>
+    <section>
+
+      <div class="">
+        New Snow: <span class="new"></span>
+      </div>
+      <div class="">
+        Lower Mountain Snow: <span class="lower"></span>
+      </div>
+      <div class="">
+        Upper Mountain Snow: <span class="upper"></span>
+      </div>
+      <div class="">
+        Percentage Open: <span class="percentage"></span>
+      </div>
+      <div class="">
+        Last Snow: <span class="last"></span>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+      var a = document.querySelectorAll("img");
+      for (var i = 0; i < a.length; i++) {
+        a[i].addEventListener("click", search);
+      }
+      function search(event){
+        var clickResort = event.target;
+        var retrieve = clickResort.getAttribute("id");
+          $.get("https://api.weatherunlocked.com/api/snowreport/"+retrieve"?app_id=29dc7594&app_key=31101fc1138162bc2abcaafb656c4534"), displayResults));
+
+
+      function displayResults(results) {
+        document.querySelector(".new").textContent = results.newsnow_in;
+        document.querySelector(".lower").textContent = results.lowersnow_in;
+        document.querySelector(".upper").textContent = results.newsnow_in;
+        document.querySelector(".percentage").textContent = results.pctopen;
+        document.querySelector(".last").textContent = results.lastsnow;
+      }
+
+      }
+
+  </script>
+</html>

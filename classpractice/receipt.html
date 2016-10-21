@@ -52,15 +52,14 @@
 </table>
 
 <script>
-var hamburger = document.querySelector("#hamburger");
-var cheeseburger = document.querySelector("#cheeseburger")
-hamburger.addEventListener("click", createReceipt);
-cheeseburger.addEventListener("click", createReceipt);
+var buttons = document.querySelectorAll("button");
+
 
 function createReceipt(event){
   var row = document.createElement("tr");
   var tdDescription = document.createElement("td");
   var tdPrice = document.createElement("td");
+  var clickedButton = event.target;
 
   event.target.getAttribute("data-price");
 
