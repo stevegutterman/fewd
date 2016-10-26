@@ -45,6 +45,35 @@
         display: flex;
       }
 
+      @media (max-width: 768px) {
+       h1 {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 15px;
+    }
+
+    img {
+      height: 60px;
+      width: 45px;
+margin: 6px;
+    }
+
+    main {
+      display: block;
+  margin: 0 25px;
+}
+
+main {
+  padding: 0 25px 25px
+}
+
+    .locations{
+      display: flex;
+flex-direction: row;
+    }
+  }
+
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
@@ -82,19 +111,17 @@
         <span id="lastsnow"></span>
       </div>
       <div class="">
-        Ski Size Recomendation:
+        Ski Size Recommendation:
         <span id="recommendation"></span>
       </div>
     </section>
+    
   <script type="text/javascript">
-
   var links = document.querySelectorAll("img");
-
   for (var i = 0; i < links.length; i++) {
     links[i].addEventListener("click", getResort);
   }
-
-  function getResort(event){
+    function getResort(event){
     var clickedResort = event.target;
     console.log(clickedResort.getAttribute("id"));
     var resortID = clickedResort.getAttribute("id");
